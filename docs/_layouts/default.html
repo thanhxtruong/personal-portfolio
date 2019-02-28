@@ -62,141 +62,28 @@
 
               <!--Page 1 of Pagination-->
               <div class="content">
-                <h3 class="text-center">Portfolio Page</h3>
+                <h3>Portfolio Page</h3>
                 <hr>
-                <p>This page was developed based on the <a href="https://startbootstrap.com/previews/freelancer/">Freelance Bootstrap theme</a> created by Start Bootstrap. The source code was modified to achieve the following customization:</p>
+                <p>This page was developed based on the <a href="https://startbootstrap.com/previews/freelancer/">Freelance Bootstrap theme</a> created by Start Bootstrap and hosted by <a href="https://pages.github.com/">GitHub Pages</a>. The source code was modified to achieve the following customization:</p>
                 <ul>
                   <li>Added the <strong>Certification</strong> section.</li>
                   <li>Modified the <strong>Portfolio</strong> section to link to external GitHub Project Pages.</li>
+                  <li>Added the audio file to the <strong>About</strong> section.</li>
                 </ul>
-              </div>
-
-              <!-- Page 3 of Pagination -->
-              <div class="content">
-                <h3 class="text-center">Execution:</h3>
+                <h3>GitHub Project Pages</h3>
                 <hr>
-                <h4>Challenge #1:</h4>
-                  <p><em>How to design an algorithm to display appointments in a calendar by month?</em></p>
-                  <a href="images/calendar_month.PNG" target="_blank"><img width="200" src="images/calendar_month.PNG" alt="Appoinment By Month"></a><br><br>
-
-                  <blockquote>                      
-                    <strong>Solution:</strong>
-                    <ul>
-                      <li>Add a VBox to each grid inside the GridPane to properly align ComboBox used for appointment lists and label used for displaying each date in the selected month.</li>
-
-                      <li>Download all appointments from the database and map them by months then by dates in a month (2-layer map). Iterate over the map by dates to add lists of appointments to ComboBoxes.</li>
-                    </ul>
-                  </blockquote>
-
-                  <div class="gistcontainer" id="gist1">
-                    <a href="#gist1" class="show">Expand</a>
-                    <script src="https://gist.github.com/thanhxtruong/3a73e4e10d49955ecc70942ab00b524b.js"></script>
-                  </div><br>
-
-                  <hr>
-
-                  <h4>Challenge #2:</h4>
-                  <p><em>How to design an algorithm to display appointments by week with overlapped time between grids?</em></p>
-                  <a href="images/calendar_week.PNG" target="_blank"><img width="200" src="images/calendar_week.PNG" alt="Appoinment By Week"></a><br><br>
-
-                  <blockquote> 
-                    <strong>Solution:</strong>
-                    <ul>
-                      <li>Anchor Labels with appointment details to AnchorPanes added to GridPane. The number of rowspan is determined based on the number of appointment hours.</li>
-
-                      <li>For appointments starting/ending at non-zero minutes, the top and bottom anchor values for the Label are set based on the startMin and endMin</li>
-                    </ul>
-                  </blockquote>
-
-                  <div class="gistcontainer" id="gist1">
-                    <a href="#gist1" class="show">Expand</a>
-                    <script src="https://gist.github.com/thanhxtruong/da9f90fbabcea06afee37ce587166c98.js"></script>
-                  </div>
-              </div>             
-
-              <!-- Page 4 of Pagination -->
-              <div class="content">
-                <h3 class="text-center">Execution:</h3>
-                <hr>
-                <h4>Challenge #3:</h4>
-                  <p><em>How to allow sharing one instance of the AppointmentDB class so that controllers can access lists and maps of appointments downloaded from the database without having to access the database?</em></p>
-
-                  <blockquote>                      
-                    <strong>Solution:</strong>
-                    <p>Singleton design pattern was used for the AppointmentDB class, which allows only one instance of the AppointmentDB class to be created in memory and shared among multiple classes as the lists/maps of appointments are updated/downloaded from the DB after each INSERT, DELETE, UPDATE query.</p>
-                  </blockquote>
-
-                  <div class="gistcontainer" id="gist1">
-                    <a href="#gist1" class="show">Expand</a>
-                    <script src="https://gist.github.com/thanhxtruong/d2e9b6a17657d83ad87432482feec8d8.js"></script>
-                  </div><br>
-
-                  <hr>
-
-                  <h4>Challenge #4:</h4>
-                  <p><em>ObservableList used for list of appointments downloaded from the database only listens for addition and removal types of change to the list resulting in Appointment TableView not updated after the user modified an appointment. How to detect list’s element updates and update TableView accordingly?</em></p>
-
-                  <blockquote> 
-                    <strong>Solution:</strong>
-                    <p>Implement a <strong><em>Callback</em></strong> with the ObservableList to report element updates.</p>
-                  </blockquote>
-
-                  <div class="gistcontainer" id="gist1">
-                    <a href="#gist1" class="show">Expand</a>
-                    <script src="https://gist.github.com/thanhxtruong/d2e9b6a17657d83ad87432482feec8d8.js"></script>
-                  </div><br>
-
-              </div>
-
-              <!-- Page 5 of Pagination -->
-              <div class="content">
-                <h3 class="text-center">Execution:</h3>
-                <hr>
-                <h4>Challenge #5:</h4>
-                <p><em>The displayScene() method in the WindowsDisplay class is used to load FXML, set Scene, and show Stage. Beside the required parameters for loading FXML and setting Stage (FXMLPath and title), there are certain scenes that required optional parameters (ResourceBundle for loading language files, ownerStage for modal Windows, and Customer and/or Appointment to set the selected Customer and/or Service in the controller data manipulation. How can this be achieved without making the optional parameters required?</em></p>
-
-                <blockquote> 
-                  <strong>Solution:</strong>
-                  <p>The Builder design pattern (WindowsBuilder class) was used to allow the necessary parameters to be passed to the Builder object through method chaining via setters in the WindowsBuilder class. A WindowsDisplay object is generated with a final build() call.</p>
-                </blockquote>
+                <p>All project pages were developed using the <a href="https://github.com/pages-themes/cayman">Cayman</a> <a href="https://jekyllrb.com/">Jekyll</a> theme. Similar to the Portfolio Page, these web pages are hosted by GitHub Project Pages. The source code was modified to achieve the following customization:</p>
+                <ul>
+                  <li>Modified the <strong><em>default.html</em></strong> file to a different layout with the <strong><em>"aside"</em></strong> section added to <strong><em>"main".</em></strong></li>
+                  <li>Pagination available in Bootstrap was used to spit content across multiple pages. The JavaScript and jQuery source code available at <a href="https://jsfiddle.net/vhyxbr3r/">JSFiddle</a> was used with some modifications to make Pagination work with the new page layout.</li>
+                </ul></p>
 
                 <div class="gistcontainer" id="gist1">
                   <a href="#gist1" class="show">Expand</a>
-                  <script src="https://gist.github.com/thanhxtruong/f917ba036e8aca5068fb2fc86e5a6087.js"></script>
-                </div><br>
-                <div class="gistcontainer" id="gist1">
-                  <a href="#gist1" class="show">Expand</a>
-                  <script src="https://gist.github.com/thanhxtruong/c7c114f96ff251c5cf2f29d42e3bcd0e.js"></script>
-                </div><br>
-                <div class="gistcontainer" id="gist1">
-                  <a href="#gist1" class="show">Expand</a>
-                  <script src="https://gist.github.com/thanhxtruong/6dacbc0bd365bb26627b5ed132934257.js"></script>
+                  <script src="https://gist.github.com/thanhxtruong/f63ea93e50ad413635eeadbc8fac2ae0.js"></script>
                 </div><br>
               </div>
-
-              <!-- Page 6 of Pagination -->
-              <div class="content">
-                <h3 class="text-center">Execution:</h3>
-                <hr>
-                <h4>Challenge #6:</h4>
-                <p><em>How to allow users to search the Customer List?</em></p>
-
-                <blockquote> 
-                  <strong>Solution:</strong>
-                  <ul>
-                    <li>Wrap a FilteredList around the ObservableList.</li>
-                    <li>Add a ChangeListener to the search TextArea. Whenever the TextArea is changed, the Predicate of the FIlteredList as defined by the lambda expression is updated. The Predicate matches the element in the ObservableList that will be visible.</li>
-                    <li>Finally, wrap the FilteredList inside a SortedList for sorting purpose and bind the sorted list to the TableView.</li>
-                  </ul>
-                </blockquote>
-
-                <div class="gistcontainer" id="gist1">
-                  <a href="#gist1" class="show">Expand</a>
-                  <script src="https://gist.github.com/thanhxtruong/071bac4ec24d6c56a5d956a9d18fdac1.js"></script>
-                </div><br>
-              </div>
-              
-              </div> <!-- end of Pagination -->
+            </div> <!-- end of Pagination -->
             
             <!-- Start of Pagination nav -->
             <div>
